@@ -37,7 +37,7 @@ The following tables lists configurable parameters of the trivy-operator chart a
 | image.pullPolicy | string | `"Always"` | The docker image pull policy |
 | image.repository | string | `"devopstales/trivy-operator"` | The docker image repository to use |
 | image.tag | string | `"2.5.0"` | The docker image tag to use |
-| imagePullSecrets | list | `[]` | list of secrets to use for imae pull |
+| imagePullSecrets | list | `[]` | list of secrets to use for image pull |
 | kube_bench_scnner.image.pullPolicy | string | `"Always"` | The docker image pull policy |
 | kube_bench_scnner.image.repository | string | `"devopstales/kube-bench-scnner"` | The docker image repository to use |
 | kube_bench_scnner.image.tag | string | `"2.5"` | The docker image tag to use |
@@ -58,6 +58,7 @@ The following tables lists configurable parameters of the trivy-operator chart a
 | podSecurityContext | object | `{"fsGroup":10001,"fsGroupChangePolicy":"OnRootMismatch"}` | security options for the pod |
 | registryAuth.enabled | bool | `false` | enable registry authentication |
 | registryAuth.image_pull_secrets | list | `["regcred"]` | list of image pull secrets for authentication |
+| resources | Pod resource requests and limits | {} |     
 | serviceAccount.annotations | object | `{}` | serviceAccount annotations |
 | serviceAccount.create | bool | `true` | Enable serviceAccount creation |
 | serviceAccount.name | string | `"trivy-operator"` | Name of the serviceAccount |

@@ -182,3 +182,12 @@ affinity: {}
 #         values:
 #         - e2e-az1
 #         - e2e-az2
+
+# Pod resource requests and limits
+resources: {}
+  # requests:
+  #   cpu: "500m"
+  #   memory: "1024Mi"
+  # limits:
+  #   cpu: "500m"
+  #   memory: "1024Mi"

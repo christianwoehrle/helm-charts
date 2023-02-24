@@ -96,6 +96,9 @@ spec:
           - name: https
             containerPort: 8443
             protocol: TCP
+        resources:
+          {{- toYaml .Values.resources | nindent 10 }}
+
 {{- if .Values.persistence.enabled }}
       volumes:
       - name: cache
